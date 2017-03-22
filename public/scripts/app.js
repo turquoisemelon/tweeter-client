@@ -78,4 +78,18 @@ function renderTweets(tweets) {
 
 $(document).ready(function() {
   renderTweets(data);
-})
+
+/* attach a submit handler to the form */
+  $("#compose").on('submit', function (event) {
+    $.ajax({
+        url: '/tweets',
+        method: 'POST',
+        data: $(this).serialize(),
+        success: function (data) {
+          console.log(data);
+        }
+      });
+      /* stop form from submitting normally */
+      event.preventDefault();
+    });
+});
