@@ -1,4 +1,4 @@
-#tweet {
+.tweet {
   flex-direction: column;
   display: flex;
   background-color: #ececec;
@@ -13,12 +13,7 @@
   height: 220px;
 }
 
-article:hover {
-  border: solid gray 1px;
-}
-
-
-#tweet img {
+.tweet img {
   width: 55px;
   height: 55px;
   border-width: 1px;
@@ -28,7 +23,7 @@ article:hover {
   margin-left: 15px;
 }
 
-#tweet header {
+.tweet header {
   display: flex;
   background-color: rgba(158, 158, 158, 0.13);
   border-top: solid #bdbdbd 0px;
@@ -37,7 +32,7 @@ article:hover {
   height: 70px;
 }
 
-#tweet header h1 {
+.tweet header h1 {
   font-size: 1.5em;
   color: #6b6c6f;
   padding-left: 5px;
@@ -45,29 +40,45 @@ article:hover {
   margin-top: 10px;
 }
 
-#tweet header h2 {
+.tweet header h2 {
   font-size: 1em;
   font-weight: 100;
   color: rgba(128, 128, 128, 0.63);
   margin-right: 10px;
 }
 
-#tweet .tweet-body {
+.tweet .tweet-body {
   height: 100px;
 }
 
-#tweet .tweet-body p {
+.tweet .tweet-body p {
   font-size: 1.3em;
   margin-left: 15px;
   margin-top: 35px;
 }
 
-#tweet footer {
+.tweet footer {
   border-top: solid 1px rgba(128, 128, 128, 0.32);
   height: 5px;
+  display: flex;
+  justify-content: space-between;
 }
 
-#tweet footer p {
+.tweet footer p {
   font-size: 0.9em;
   margin-left: 15px;
+}
+
+.tweet footer span {
+  margin-top: 15px;
+  margin-right: 5px;
+  color: white;
+}
+
+.tweet:hover {
+  border: solid gray 2px;
+}
+
+.tweet:hover footer span {
+  color: #7BC3B7;
 }
