@@ -34,3 +34,9 @@
   border-radius: 4px;
   background-color: #caf3e5;
 }
+
+#nav-bar button:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
