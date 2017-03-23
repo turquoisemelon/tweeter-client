@@ -62,5 +62,9 @@ $(document).ready(function() {
   };
 
   loadTweets();
+  $("button").click(function(){
+    $(".new-tweet").slideToggle("fast", function (){});
+  });
+
 
 });
