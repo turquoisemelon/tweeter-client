@@ -40,6 +40,7 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+      <button type="button" name="button">Compose</button>
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -54,28 +55,30 @@
           </span>
         </form>
       </section>
-      <article class="tweet">
-        <header>
-          <img src="/images/bird.png" alt="bird" />
-          <h1>Bill Fields</h1>
-          <h2>@MrFields</h2>
-        </header>
-        <div class="tweet-body">
-          <p>
-            little tweet here
-          </p>
-        </div>
-        <footer>
+      <div class="tweets-container">
+        <article class="tweet">
+          <header>
+            <img src="/images/bird.png" alt="bird" />
+            <h1>Bill Fields</h1>
+            <h2>@MrFields</h2>
+          </header>
+          <div class="tweet-body">
             <p>
-              10 days ago
+              little tweet here
             </p>
-            <span>
-              <i class="fa fa-flag" aria-hidden="true"></i>
-              <i class="fa fa-retweet" aria-hidden="true"></i>
-              <i class="fa fa-heart" aria-hidden="true"></i>
-            </span>
-        </footer>
-      </article>
+          </div>
+          <footer>
+              <p>
+                10 days ago
+              </p>
+              <span>
+                <i class="fa fa-flag" aria-hidden="true"></i>
+                <i class="fa fa-retweet" aria-hidden="true"></i>
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              </span>
+          </footer>
+        </article>
+      </div>
     </main>
   </body>
 </html>

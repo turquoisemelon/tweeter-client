@@ -23,3 +23,14 @@
 #nav-bar img.logo {
   float:left;
 }
+
+#nav-bar button {
+  margin-left: 1080px;
+  width: 120px;
+  height: 60px;
+  font-size: 1.5em;
+  color: #00a087;
+  border: solid black 1.7px;
+  border-radius: 4px;
+  background-color: #caf3e5;
+}

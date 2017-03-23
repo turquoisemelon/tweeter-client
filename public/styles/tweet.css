@@ -75,6 +75,10 @@
   color: white;
 }
 
+.tweet footer span i {
+  margin-left: 4px;
+}
+
 .tweet:hover {
   border: solid gray 2px;
 }
