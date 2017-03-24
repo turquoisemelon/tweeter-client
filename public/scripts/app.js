@@ -17,7 +17,7 @@ function createTweetElement(obj) {
   .append($("<h1>").text(obj.user.name))
   .append($("<h2>").text(obj.user.handle)))  //appending everyting under header
   .append($("<div>").addClass("tweet-body").append($("<p>").text(obj.content.text))) //appending everyting under div-tweet-body
-  .append($("<footer>").append($("<p>").text(obj.created_at)).append( $("<span>").append("<i class='fa fa-flag' aria-hidden='true'>").append("<i class='fa fa-retweet' aria-hidden='true'>").append("<i class='fa fa-heart' aria-hidden='true'>")));
+  .append($("<footer>").append($("<p>").text(getTheCurrentTime(obj.created_at))).append( $("<span>").append("<i class='fa fa-flag' aria-hidden='true'>").append("<i class='fa fa-retweet' aria-hidden='true'>").append("<i class='fa fa-heart' aria-hidden='true'>")));
   return $tweet;
 }
 
@@ -31,15 +31,21 @@ function renderTweets(tweets) {
   }
 }
 
-// function getTheCurrentTime (date) {
-//   var currentDate = Date.now;
-//   var howLongAgo = currentDate - date;
-//   if (howLongAgo < 1) {
-//     return `${howLongAgo} seconds ago`;
-//   } else if (howLongAgo > 1) {
-//     return `${howLongAgo / 60} minutes ago`;
-//   }
-// }
+function getTheCurrentTime(date) {
+  var currentDate = Date.now();
+  var howLongAgoSeconds = (currentDate - date) / 1000 / 60;
+  var howLongAgoMinutes = (currentDate - date) / 1000 / 60;
+  var howLongAgoHours = (currentDate - date) / 1000 / 60 / 60;
+  if (howLongAgoMinutes < 1) {
+    return `${Math.floor(howLongAgoSeconds)} seconds ago`;
+  } else if (howLongAgoMinutes > 1 && howLongAgoMinutes < 60) {
+    return `${Math.floor(howLongAgoMinutes)} minutes ago`;
+  } else if (howLongAgoMinutes > 60 && howLongAgoHours < 24) {
+    return `${Math.floor(howLongAgoHours)} hours ago`;
+  } else if (howLongAgoHours > 24) {
+    return `${Math.floor(howLongAgoHours / 24)} days ago`;
+  }
+}
 
 $(document).ready(function() {
 /* attach a submit handler to the form */
