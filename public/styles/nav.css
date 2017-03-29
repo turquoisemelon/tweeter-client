@@ -25,7 +25,7 @@
 }
 
 #nav-bar button {
-  margin-left: 1030px;
+  float: right;
   width: 140px;
   height: 60px;
   font-size: 1.5em;
@@ -33,6 +33,7 @@
   border: solid black 1.7px;
   border-radius: 4px;
   background-color: #caf3e5;
+  margin-top: 10px;
 }
 
 #nav-bar button:hover {
